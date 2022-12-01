@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script> 
+
+let playerSelection = prompt("Rock, paper, scissors, GO!");
+console.log(playerSelection);
+
+let choices = ['rock', 'paper', 'scissors'];
+// console.log(choices);
+
+let computerSelection = choices[Math.floor(Math.random() * choices.length)];
+console.log(computerSelection);
+
+function playRound () {
+    if (playerSelection === 'rock' && computerSelection === 'scissors') {
+        alert(("You win!") + playerSelection + (" beats ") + computerSelection);
+    }
+    else if (playerSelection === 'scissors' && computerSelection === 'paper') {
+        alert(("You win!") + playerSelection + (" beats ") + computerSelection);
+    }
+    else if (playerSelection === 'paper' && computerSelection === 'rock') {
+        alert(("You win!") + playerSelection + (" beats ") + computerSelection);
+    }
+    else if (playerSelection === computerSelection) {
+        alert("A tie between human and machine: nobody wins!")
+    }
+    else {
+        alert(("The computer wins!") + computerSelection + (" beats ") + playerSelection + (" THE MACHINES WILL TAKE OVER!"));
+    }
+       
+};
+
+playRound(); 
+
+    
+    </script>
+    <title>Rock, paper, scissors!</title>
+</head>
+<body>
+    
+</body>
+</html>
