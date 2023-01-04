@@ -17,31 +17,13 @@
 
     <script> 
 
-//Step 1: We present three buttons on screen, the user clicks on any which one:
-
-/*const first = document.querySelector("#first");
-first.addEventListener("click", () => console.log("uno") )
-const second = document.querySelector("#second");
-second.addEventListener("click", () => console.log("dos"))
-const third = document.querySelector("#third");
-third.addEventListener("click", () => console.log("tres")) //these are working*/
-//I switched all these variables for a single, collective one:
-
 const buttons = document.querySelectorAll("button");
-// console.log(buttons); // this works, shows us the nodelist
-
-//Step 2: assign the value chosen by user to the playerSelection:
-
-
-
-// Step 3: The computer chooses at random:
 
 function computerPlay() {
     let choices = ['rock', 'paper', 'scissors']
     return choices[Math.floor(Math.random() * choices.length)];
 }
 
-// Step 4: The values chosen by user and computer are compared to see who wins:
 function playRound (playerSelection) {
     let computerSelection = computerPlay()
     let result = ""
