@@ -15,7 +15,8 @@ h1 {
     color: #fff;
     font-family: 'Neonderthaw', cursive;
     font-weight: lighter;
-    font-size: 7em;
+    font-size: 5.5em;
+    max-height: fit-content;
     text-align: center;
     text-shadow:
     0 0 7px #fff,
@@ -150,3 +151,10 @@ footer {
     font-size: .7em;
     color: #a6a6a6;
  }
+
+ /* MOBILE STYLE */
+ @media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 4em;
+    }
+  }
