@@ -17,6 +17,9 @@
         <h1>Rock, paper, scissors!</h1>
     </div>
     <div class="buttons">
+        <audio id="sound"> 
+        <source src="/audio/audiomass-light_flicker.mp3" /> 
+        </audio>
         <button id="first" value="rock"><i class="fa-regular fa-hand-back-fist"></i></button>
         <button id="second" value="paper"><i class="fa-regular fa-hand"></i></button>
         <button id="third" value="scissors"><i class="fa-regular fa-hand-scissors"></i></button>
@@ -43,16 +46,20 @@ function playRound (playerSelection) {
     if ((playerSelection == 'rock' && computerSelection == 'scissors') ||
         (playerSelection == 'scissors' && computerSelection == 'paper') ||
         (playerSelection == 'paper' && computerSelection == 'rock')) {
-        result = ('You win! ' + playerSelection + ' beats ' + computerSelection + "!")
+        result = (`You win! ${capitalizeFirstLetter(playerSelection)} beats ${computerSelection}!`)
     }
     else if (playerSelection == computerSelection) {
         result = ('It\'s a tie. You both chose ' + playerSelection + ".")
     }
     else {
-        result = ('You lose! ' + computerSelection + ' beats ' + playerSelection + "." + ' The machines will take over!')
+        result = (`You lose! ${capitalizeFirstLetter(computerSelection)} beats ${playerSelection}. The machines will take over!`)
     }
     document.getElementById('result').innerHTML = result
     return        
+}
+
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase()
 }
 
 buttons.forEach(button => {button.addEventListener("click", function(){
