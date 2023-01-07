@@ -1,0 +1,22 @@
+body {
+    height: 600px;
+    background-image: radial-gradient(#3b3b3b, #282828, black);
+    font-size: 1em;
+}
+
+h1 {
+    color: #fff;
+    font-family: 'Neonderthaw', cursive;
+    font-weight: lighter;
+    font-size: 7em;
+    text-align: center;
+    text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #FF10F0,
+    0 0 82px #FF10F0,
+    0 0 92px #FF10F0,
+    0 0 102px #FF10F0,
+    0 0 151px #FF10F0;
+}
