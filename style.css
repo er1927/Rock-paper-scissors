@@ -1,3 +1,6 @@
+/* * {
+    outline: dotted 1px white;
+} */
 body {
     height: 600px;
     background-image: radial-gradient(#3b3b3b, #282828, black);
@@ -23,9 +26,10 @@ h1 {
     0 0 92px #FF10F0,
     0 0 102px #FF10F0,
     0 0 151px #FF10F0;
-    border: 0.2rem solid #fff;
+    border: .2rem solid #fff;
     border-radius: 2rem;
-    padding: 0.4em;
+    margin: .3em;
+    padding: .3em;
     box-shadow: 0 0 .2rem #fff,
               0 0 .2rem #fff,
               0 0 2rem #FF10F0,
@@ -64,6 +68,7 @@ h1 {
 .buttons {
     display: flex;
     justify-content: space-around;
+    padding: 1.5em;
     width: 80%;
 }
 
@@ -122,19 +127,26 @@ i[class*=fa-regular]::before{
     0 0 151px #04d9ff;
  }
 
+
  #result {
     color: white;
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 2em;
     text-align: center;
-    border: 0.2rem solid #fff;
+    border: .2rem solid #fff;
     border-radius: 2rem;
     margin:1em;
-    padding: 0.4em;
+    padding: .4em;
     box-shadow: 0 0 .2rem #fff,
               0 0 .2rem #fff,
               0 0 2rem #FF10F0,
               0 0 0.8rem #FF10F0,
               0 0 2.8rem #FF10F0,
               inset 0 0 1.3rem #FF10F0;
+ }
+
+footer {
+    font-family: Verdana;
+    font-size: .7em;
+    color: #a6a6a6;
  }

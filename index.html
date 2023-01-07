@@ -21,11 +21,12 @@
         <button id="second" value="paper"><i class="fa-regular fa-hand"></i></button>
         <button id="third" value="scissors"><i class="fa-regular fa-hand-scissors"></i></button>
     </div>
-    <div id="result">Who will win?</div>
+    <div id="result">
+        Who will win?
+    </div>
     <footer>
-
+        <p>&#169 Elizabeth Roberts <script>document.write( new Date().getFullYear() );</script></p>
     </footer>
-
     <script> 
 
 const buttons = document.querySelectorAll("button");
@@ -42,13 +43,13 @@ function playRound (playerSelection) {
     if ((playerSelection == 'rock' && computerSelection == 'scissors') ||
         (playerSelection == 'scissors' && computerSelection == 'paper') ||
         (playerSelection == 'paper' && computerSelection == 'rock')) {
-        result = ('You win! ' + playerSelection + ' beats ' + computerSelection)
+        result = ('You win! ' + playerSelection + ' beats ' + computerSelection + "!")
     }
     else if (playerSelection == computerSelection) {
-        result = ('It\'s a tie. You both chose ' + playerSelection)
+        result = ('It\'s a tie. You both chose ' + playerSelection + ".")
     }
     else {
-        result = ('You lose! ' + computerSelection + ' beats ' + playerSelection + ' The machines will take over!')
+        result = ('You lose! ' + computerSelection + ' beats ' + playerSelection + "." + ' The machines will take over!')
     }
     document.getElementById('result').innerHTML = result
     return        
