@@ -149,8 +149,12 @@ i[class*=fa-regular]::before{
 footer {
     font-family: Verdana;
     font-size: .7em;
+}
+
+a {
+    text-decoration: none;
     color: #a6a6a6;
- }
+}
 
  /* MOBILE STYLE */
  @media only screen and (max-width: 768px) {

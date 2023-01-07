@@ -17,9 +17,6 @@
         <h1>Rock, paper, scissors!</h1>
     </div>
     <div class="buttons">
-        <audio id="sound"> 
-        <source src="/audio/audiomass-light_flicker.mp3" /> 
-        </audio>
         <button id="first" value="rock"><i class="fa-regular fa-hand-back-fist"></i></button>
         <button id="second" value="paper"><i class="fa-regular fa-hand"></i></button>
         <button id="third" value="scissors"><i class="fa-regular fa-hand-scissors"></i></button>
@@ -28,11 +25,12 @@
         Who will win?
     </div>
     <footer>
-        <p>&#169 Elizabeth Roberts <script>document.write( new Date().getFullYear() );</script></p>
+        <a href="https://github.com/er1927" target="_blank"><p>&#169 Elizabeth Roberts <script>document.write( new Date().getFullYear() );</script></p></a>
     </footer>
     <script> 
 
 const buttons = document.querySelectorAll("button");
+audio = null;
 
 function computerPlay() {
     let choices = ['rock', 'paper', 'scissors']
@@ -49,7 +47,7 @@ function playRound (playerSelection) {
         result = (`You win! ${capitalizeFirstLetter(playerSelection)} beats ${computerSelection}!`)
     }
     else if (playerSelection == computerSelection) {
-        result = ('It\'s a tie. You both chose ' + playerSelection + ".")
+        result = (`It\'s a tie. You both chose ${playerSelection}.`)
     }
     else {
         result = (`You lose! ${capitalizeFirstLetter(computerSelection)} beats ${playerSelection}. The machines will take over!`)
@@ -66,6 +64,13 @@ buttons.forEach(button => {button.addEventListener("click", function(){
     playRound(button.value)
     })
 })
+buttons.forEach(button => {button.addEventListener("click", soundEffect, false)});
+
+function soundEffect() {
+    audio = new Audio("audiomass-light_flicker.mp3");
+    audio.play();
+}
+
 
 </script>
 </body>
