@@ -2,8 +2,11 @@ body {
     height: 600px;
     background-image: radial-gradient(#3b3b3b, #282828, black);
     font-size: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
+/* HEADER */
 h1 {
     animation: pulsate 0.11s ease-in-out infinite alternate;
     color: #fff;
@@ -21,7 +24,7 @@ h1 {
     0 0 102px #FF10F0,
     0 0 151px #FF10F0;
 }
-
+/* HEADER ANIMATION */
 @keyframes pulsate {
     100% {
       /* Larger blur radius */
@@ -48,3 +51,65 @@ h1 {
         0 0 140px #FF10F0;
     }
   }
+/* BUTTON ICONS */
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+}
+
+button {
+    background-color: transparent; 
+    border: none;
+    font-size: 5em;
+    font-weight: lighter;
+    text-align: center;
+}
+
+i[class*=fa-regular]::before{
+    background:transparent;
+ } 
+/* not sure this works */
+
+
+
+ /* NEON EFFECT ON BUTTON ICONS */
+ .fa-hand-back-fist {
+    color: #fff;
+    text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #9D00FF,
+    0 0 82px #9D00FF,
+    0 0 92px #9D00FF,
+    0 0 102px #9D00FF,
+    0 0 151px #9D00FF;   
+ }
+
+ .fa-hand {
+    color: #fff;
+    text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #FFF01F,
+    0 0 82px #FFF01F,
+    0 0 92px #FFF01F,
+    0 0 102px #FFF01F,
+    0 0 151px #FFF01F;
+ }
+
+ .fa-hand-scissors {
+    color: #fff;
+    text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #04d9ff,
+    0 0 82px #04d9ff,
+    0 0 92px #04d9ff,
+    0 0 102px #04d9ff,
+    0 0 151px #04d9ff;
+ }
+
